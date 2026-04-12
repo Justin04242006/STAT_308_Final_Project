@@ -5,7 +5,9 @@ date: "2026-04-12"
 output: html_document
 ---
 
-This project utilizes a Kaggle dataset called "Student Academic Performance Dataset." The original data was downloaded here: https://www.kaggle.com/datasets/ayeshasiddiqa123/student-perfirmance. The dataset contains 20 variables. Each row (observation) represents a single, distinct student surveyed. We used the following 11 variables in our analysis:
+Welcome to the repository hosting my code for the semester project of my Applied Regression Analysis Class! This group project utilized a Kaggle dataset called "Student Academic Performance Dataset." The original data was downloaded here: https://www.kaggle.com/datasets/ayeshasiddiqa123/student-perfirmance. 
+
+The dataset contains 20 variables. Each row (observation) represents a single, distinct student surveyed. We used the following 11 variables in our analysis:
 
 ExamScore (discrete): student scores on a particular exam. 
 
@@ -36,5 +38,5 @@ Our group used exam scores as the response variable and all other variables as p
 3) Variable selection and model refinement
 4) Assessment of model strengths and weaknesses
 
-I was primarily responsible for 2) and 3) and will thus focus on these parts of the project in this portfolio entry.
+I was primarily responsible for 2) and 3) and will thus focus on these parts of the project in this portfolio entry. The code I used to complete these parts of the project can be found in the Project_Code.Rmd file in this project's Git repository.
 
