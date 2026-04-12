@@ -1,0 +1,40 @@
+---
+title: "README.md"
+author: "Justin Peabody"
+date: "2026-04-12"
+output: html_document
+---
+
+This project utilizes a Kaggle dataset called "Student Academic Performance Dataset." The original data was downloaded here: https://www.kaggle.com/datasets/ayeshasiddiqa123/student-perfirmance. The dataset contains 20 variables. Each row (observation) represents a single, distinct student surveyed. We used the following 11 variables in our analysis:
+
+ExamScore (discrete): student scores on a particular exam. 
+
+Hours Studied (discrete): time (in hours) spent preparing for the exam
+
+Attendance (continuous): percentage of classes attended
+
+Tutoring Sessions (discrete): the number of times students met with a tutor ouside of classes to prepare for the exam
+
+Previous scores (discrete): scores on a particular previous exam
+
+Parental involvement (categorical, 3 levels): the degree of academic support and assistance given by parents (low, medium, or high)
+
+Peer Influence (categorical, 3 levels): the degree, as perceived by the student being surveyed, to which their peers influenced their academic performance (low, medium, or high)
+
+Parental Education Level (categorical, 3 levels): The highest level of education completed by at least one of the student's parents (High school, college, or postgraduate)
+
+Family income (categorical, 3 levels): low, medium, or high
+
+Distance between school and home (categorical, 3 levels): near, moderate, or far
+
+Access to resources: availability of educational resources (categorical, 3 levels): low, medium, high
+
+Our group used exam scores as the response variable and all other variables as predictors. We used multiple linear regression methodologies taught in class, including model building, assumptions, diagnostics, residual analysis, and variable selection, to generate a comprehensive picture of the many factors that influence a student's exam scores. The analysis consisted of three main phases:
+
+1) Exploratory data analysis and visualization
+2) Model building and diagnostics
+3) Variable selection and model refinement
+4) Assessment of model strengths and weaknesses
+
+I was primarily responsible for 2) and 3) and will thus focus on these parts of the project in this portfolio entry.
+
