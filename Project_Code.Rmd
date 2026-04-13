@@ -2,7 +2,7 @@
 title: "STAT_308_Project_Code"
 author: "Justin Peabody"
 date: "2026-04-12"
-output: html_document
+output: github_document
 ---
 
 This is a file containing the R code I used to run the regression analyses and generate relevant visualizations for my STAT 308 final project.
@@ -28,7 +28,7 @@ plot(Exam_Score~Hours_Studied, data=Education_data, col=ifelse(Education_data$Ex
 
 ```
 
-Creatig these plots made it visually clear that the vast majority of the dataset represents exam scores below 80. Only a small cluster of observations correspond to exam scores at or above 80. This motivated our group to split the data into two datasets based on exam score, then generate a separate multiple regression model for each dataset.
+Creating these plots made it visually clear that the vast majority of the dataset represents exam scores below 80. Only a small cluster of observations correspond to exam scores at or above 80. This motivated our group to split the data into two datasets based on exam score, then generate a separate multiple regression model for each dataset.
 
 ```{r}
 
