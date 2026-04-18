@@ -808,11 +808,11 @@ anova(test_model_12, High_exam_scores_initial_model_v2)
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 ``` r
-#Not Significant (p=0.05045): consider removing hours studied from the model
+#Not Significant (p=0.05045): remove hours studied from the model
 
 #Attendance
-test_model_3<-lm(Exam_Score~Previous_Scores+Hours_Studied+Tutoring_Sessions+Access_to_Resources+Parental_Involvement+Peer_Influence+Parental_Education_Level+Family_Income+Distance_from_Home, data=Lower_exam_scores_3)
-anova(test_model_3, Lower_exam_scores_initial_model_v3)
+test_model_13<-lm(Exam_Score~Previous_Scores+Hours_Studied+Tutoring_Sessions+Access_to_Resources+Parental_Involvement+Peer_Influence+Parental_Education_Level+Family_Income+Distance_from_Home, data=High_exam_scores_2)
+anova(test_model_13, High_exam_scores_initial_model_v2)
 ```
 
     ## Analysis of Variance Table
@@ -823,18 +823,18 @@ anova(test_model_3, Lower_exam_scores_initial_model_v3)
     ## Model 2: Exam_Score ~ Previous_Scores + Hours_Studied + Attendance + Tutoring_Sessions + 
     ##     Access_to_Resources + Parental_Involvement + Peer_Influence + 
     ##     Parental_Education_Level + Family_Income + Distance_from_Home
-    ##   Res.Df   RSS Df Sum of Sq     F    Pr(>F)    
-    ## 1   6384 37642                                 
-    ## 2   6383  3843  1     33799 56132 < 2.2e-16 ***
+    ##   Res.Df    RSS Df Sum of Sq      F  Pr(>F)  
+    ## 1     31 521.82                              
+    ## 2     30 429.83  1    91.989 6.4204 0.01674 *
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 ``` r
-#Significant (p<2.2e^-16): keep attendance in the model for now
+#Significant (p=0.01674): keep attendance in the model for now
 
 #Tutoring sessions
-test_model_4<-lm(Exam_Score~Previous_Scores+Hours_Studied+Attendance+Access_to_Resources+Parental_Involvement+Peer_Influence+Parental_Education_Level+Family_Income+Distance_from_Home, data=Lower_exam_scores_3)
-anova(test_model_4, Lower_exam_scores_initial_model_v3)
+test_model_14<-lm(Exam_Score~Previous_Scores+Hours_Studied+Attendance+Access_to_Resources+Parental_Involvement+Peer_Influence+Parental_Education_Level+Family_Income+Distance_from_Home, data=High_exam_scores_2)
+anova(test_model_14, High_exam_scores_initial_model_v2)
 ```
 
     ## Analysis of Variance Table
@@ -845,18 +845,16 @@ anova(test_model_4, Lower_exam_scores_initial_model_v3)
     ## Model 2: Exam_Score ~ Previous_Scores + Hours_Studied + Attendance + Tutoring_Sessions + 
     ##     Access_to_Resources + Parental_Involvement + Peer_Influence + 
     ##     Parental_Education_Level + Family_Income + Distance_from_Home
-    ##   Res.Df    RSS Df Sum of Sq      F    Pr(>F)    
-    ## 1   6384 6298.3                                  
-    ## 2   6383 3843.4  1    2454.8 4076.9 < 2.2e-16 ***
-    ## ---
-    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ##   Res.Df    RSS Df Sum of Sq      F Pr(>F)
+    ## 1     31 454.28                           
+    ## 2     30 429.83  1    24.447 1.7063 0.2014
 
 ``` r
-#Significant (p<2.2e^-16): keep tutoring sessions in the model for now
+#Not Significant (p=0.2014): remove tutoring sessions from the model
 
 #Access to resources
-test_model_5<-lm(Exam_Score~Previous_Scores+Hours_Studied+Attendance+Tutoring_Sessions+Parental_Involvement+Peer_Influence+Parental_Education_Level+Family_Income+Distance_from_Home, data=Lower_exam_scores_3)
-anova(test_model_5, Lower_exam_scores_initial_model_v3)
+test_model_15<-lm(Exam_Score~Previous_Scores+Hours_Studied+Attendance+Tutoring_Sessions+Parental_Involvement+Peer_Influence+Parental_Education_Level+Family_Income+Distance_from_Home, data=High_exam_scores_2)
+anova(test_model_15, High_exam_scores_initial_model_v2)
 ```
 
     ## Analysis of Variance Table
@@ -867,18 +865,18 @@ anova(test_model_5, Lower_exam_scores_initial_model_v3)
     ## Model 2: Exam_Score ~ Previous_Scores + Hours_Studied + Attendance + Tutoring_Sessions + 
     ##     Access_to_Resources + Parental_Involvement + Peer_Influence + 
     ##     Parental_Education_Level + Family_Income + Distance_from_Home
-    ##   Res.Df    RSS Df Sum of Sq      F    Pr(>F)    
-    ## 1   6385 6878.3                                  
-    ## 2   6383 3843.4  2    3034.8 2520.1 < 2.2e-16 ***
+    ##   Res.Df    RSS Df Sum of Sq      F   Pr(>F)    
+    ## 1     32 900.14                                 
+    ## 2     30 429.83  2    470.31 16.413 1.53e-05 ***
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 ``` r
-#Significant (p<2.2e^-16): keep access to resources in the model for now
+#Significant (p=1.53e^-5): keep access to resources in the model for now
 
 #Parental involvement
-test_model_6<-lm(Exam_Score~Previous_Scores+Hours_Studied+Attendance+Tutoring_Sessions+Access_to_Resources+Peer_Influence+Parental_Education_Level+Family_Income+Distance_from_Home, data=Lower_exam_scores_3)
-anova(test_model_6, Lower_exam_scores_initial_model_v3)
+test_model_16<-lm(Exam_Score~Previous_Scores+Hours_Studied+Attendance+Tutoring_Sessions+Access_to_Resources+Peer_Influence+Parental_Education_Level+Family_Income+Distance_from_Home, data=High_exam_scores_2)
+anova(test_model_16, High_exam_scores_initial_model_v2)
 ```
 
     ## Analysis of Variance Table
@@ -889,18 +887,16 @@ anova(test_model_6, Lower_exam_scores_initial_model_v3)
     ## Model 2: Exam_Score ~ Previous_Scores + Hours_Studied + Attendance + Tutoring_Sessions + 
     ##     Access_to_Resources + Parental_Involvement + Peer_Influence + 
     ##     Parental_Education_Level + Family_Income + Distance_from_Home
-    ##   Res.Df    RSS Df Sum of Sq      F    Pr(>F)    
-    ## 1   6385 6806.5                                  
-    ## 2   6383 3843.4  2    2963.1 2460.5 < 2.2e-16 ***
-    ## ---
-    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ##   Res.Df    RSS Df Sum of Sq      F Pr(>F)
+    ## 1     32 435.99                           
+    ## 2     30 429.83  2    6.1589 0.2149 0.8078
 
 ``` r
-#Significant (p<2.2e^-16): keep parental involvement in the model for now
+#Not Significant (p=0.8078): remove parental involvement from the model
 
 #Peer Influence
-test_model_7<-lm(Exam_Score~Previous_Scores+Hours_Studied+Attendance+Tutoring_Sessions+Access_to_Resources+Parental_Involvement+Parental_Education_Level+Family_Income+Distance_from_Home, data=Lower_exam_scores_3)
-anova(test_model_7, Lower_exam_scores_initial_model_v3)
+test_model_7<-lm(Exam_Score~Previous_Scores+Hours_Studied+Attendance+Tutoring_Sessions+Access_to_Resources+Parental_Involvement+Parental_Education_Level+Family_Income+Distance_from_Home, data=High_exam_scores_2)
+anova(test_model_7, High_exam_scores_initial_model_v2)
 ```
 
     ## Analysis of Variance Table
@@ -911,18 +907,16 @@ anova(test_model_7, Lower_exam_scores_initial_model_v3)
     ## Model 2: Exam_Score ~ Previous_Scores + Hours_Studied + Attendance + Tutoring_Sessions + 
     ##     Access_to_Resources + Parental_Involvement + Peer_Influence + 
     ##     Parental_Education_Level + Family_Income + Distance_from_Home
-    ##   Res.Df    RSS Df Sum of Sq      F    Pr(>F)    
-    ## 1   6385 4762.4                                  
-    ## 2   6383 3843.4  2    918.94 763.07 < 2.2e-16 ***
-    ## ---
-    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ##   Res.Df    RSS Df Sum of Sq      F Pr(>F)
+    ## 1     32 444.21                           
+    ## 2     30 429.83  2    14.377 0.5017 0.6105
 
 ``` r
-#Significant (p<2.2e^-16): keep peer influence in the model for now
+#Not Significant (p=0.6105): remove peer influence from the model
 
 #Parental Education Level
-test_model_8<-lm(Exam_Score~Previous_Scores+Hours_Studied+Attendance+Tutoring_Sessions+Access_to_Resources+Parental_Involvement+Peer_Influence+Family_Income+Distance_from_Home, data=Lower_exam_scores_3)
-anova(test_model_8, Lower_exam_scores_initial_model_v3)
+test_model_8<-lm(Exam_Score~Previous_Scores+Hours_Studied+Attendance+Tutoring_Sessions+Access_to_Resources+Parental_Involvement+Peer_Influence+Family_Income+Distance_from_Home, data=High_exam_scores_2)
+anova(test_model_8, High_exam_scores_initial_model_v2)
 ```
 
     ## Analysis of Variance Table
@@ -933,18 +927,16 @@ anova(test_model_8, Lower_exam_scores_initial_model_v3)
     ## Model 2: Exam_Score ~ Previous_Scores + Hours_Studied + Attendance + Tutoring_Sessions + 
     ##     Access_to_Resources + Parental_Involvement + Peer_Influence + 
     ##     Parental_Education_Level + Family_Income + Distance_from_Home
-    ##   Res.Df    RSS Df Sum of Sq      F    Pr(>F)    
-    ## 1   6385 4807.7                                  
-    ## 2   6383 3843.4  2     964.3 800.74 < 2.2e-16 ***
-    ## ---
-    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ##   Res.Df    RSS Df Sum of Sq      F Pr(>F)
+    ## 1     32 439.17                           
+    ## 2     30 429.83  2    9.3384 0.3259 0.7244
 
 ``` r
-#Significant (p<2.2e^-16): keep parental education level in the model for now
+#Not Significant (p=0.7244): remove parental education from the model
 
 #Family Income
-test_model_9<-lm(Exam_Score~Previous_Scores+Hours_Studied+Attendance+Tutoring_Sessions+Access_to_Resources+Parental_Involvement+Peer_Influence+Parental_Education_Level+Distance_from_Home, data=Lower_exam_scores_3)
-anova(test_model_9, Lower_exam_scores_initial_model_v3)
+test_model_9<-lm(Exam_Score~Previous_Scores+Hours_Studied+Attendance+Tutoring_Sessions+Access_to_Resources+Parental_Involvement+Peer_Influence+Parental_Education_Level+Distance_from_Home, data=High_exam_scores_2)
+anova(test_model_9, High_exam_scores_initial_model_v2)
 ```
 
     ## Analysis of Variance Table
@@ -955,18 +947,16 @@ anova(test_model_9, Lower_exam_scores_initial_model_v3)
     ## Model 2: Exam_Score ~ Previous_Scores + Hours_Studied + Attendance + Tutoring_Sessions + 
     ##     Access_to_Resources + Parental_Involvement + Peer_Influence + 
     ##     Parental_Education_Level + Family_Income + Distance_from_Home
-    ##   Res.Df    RSS Df Sum of Sq      F    Pr(>F)    
-    ## 1   6385 4660.8                                  
-    ## 2   6383 3843.4  2    817.42 678.77 < 2.2e-16 ***
-    ## ---
-    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ##   Res.Df    RSS Df Sum of Sq      F Pr(>F)
+    ## 1     32 462.98                           
+    ## 2     30 429.83  2    33.148 1.1568 0.3281
 
 ``` r
-#Significant (p<2.2e^-16): keep family income in the model for now
+#Not Significant (p=0.3281): remove family income from the model
 
 #Distance from home
-test_model_10<-lm(Exam_Score~Previous_Scores+Hours_Studied+Attendance+Tutoring_Sessions+Access_to_Resources+Parental_Involvement+Peer_Influence+Parental_Education_Level+Family_Income, data=Lower_exam_scores_3)
-anova(test_model_10, Lower_exam_scores_initial_model_v3)
+test_model_10<-lm(Exam_Score~Previous_Scores+Hours_Studied+Attendance+Tutoring_Sessions+Access_to_Resources+Parental_Involvement+Peer_Influence+Parental_Education_Level+Family_Income, data=High_exam_scores_2)
+anova(test_model_10, High_exam_scores_initial_model_v2)
 ```
 
     ## Analysis of Variance Table
@@ -977,8 +967,71 @@ anova(test_model_10, Lower_exam_scores_initial_model_v3)
     ## Model 2: Exam_Score ~ Previous_Scores + Hours_Studied + Attendance + Tutoring_Sessions + 
     ##     Access_to_Resources + Parental_Involvement + Peer_Influence + 
     ##     Parental_Education_Level + Family_Income + Distance_from_Home
-    ##   Res.Df    RSS Df Sum of Sq      F    Pr(>F)    
-    ## 1   6385 4532.7                                  
-    ## 2   6383 3843.4  2    689.25 572.34 < 2.2e-16 ***
+    ##   Res.Df    RSS Df Sum of Sq     F Pr(>F)
+    ## 1     32 489.46                          
+    ## 2     30 429.83  2    59.631 2.081 0.1425
+
+``` r
+#Not Significant (p=0.1425): remove family income from the model
+```
+
+Partial F tests suggest that we should only keep attendance, previous
+scores, and access to resources in the model. Let’s do VIF and stepwise
+selection and see if they converge to the same result.
+
+``` r
+VIF(High_exam_scores_initial_model_v2)
+```
+
+    ##                              GVIF Df GVIF^(1/(2*Df))
+    ## Previous_Scores          1.506264  1        1.227300
+    ## Hours_Studied            1.585175  1        1.259037
+    ## Attendance               1.857539  1        1.362916
+    ## Tutoring_Sessions        1.394246  1        1.180782
+    ## Access_to_Resources      1.881324  2        1.171159
+    ## Parental_Involvement     1.685885  2        1.139481
+    ## Peer_Influence           2.008869  2        1.190523
+    ## Parental_Education_Level 1.811278  2        1.160102
+    ## Family_Income            1.691101  2        1.140361
+    ## Distance_from_Home       2.121890  2        1.206926
+
+There appears to be no evidence of multicollinearity among the
+variables. We then perform stepwise selection and see if the resulting
+model is the same as the model suggested by partial F tests.
+
+``` r
+High_exam_scores_best_model<-step(High_exam_scores_initial_model_v2, direction="both", trace=0)
+summary(High_exam_scores_best_model)
+```
+
+    ## 
+    ## Call:
+    ## lm(formula = Exam_Score ~ Previous_Scores + Hours_Studied + Attendance + 
+    ##     Tutoring_Sessions + Access_to_Resources + Distance_from_Home, 
+    ##     data = High_exam_scores_2)
+    ## 
+    ## Residuals:
+    ##     Min      1Q  Median      3Q     Max 
+    ## -6.9339 -2.3078  0.2604  2.4969  5.9152 
+    ## 
+    ## Coefficients:
+    ##                            Estimate Std. Error t value Pr(>|t|)    
+    ## (Intercept)                59.58840    4.19777  14.195  < 2e-16 ***
+    ## Previous_Scores             0.18962    0.03767   5.033 1.20e-05 ***
+    ## Hours_Studied               0.20438    0.09443   2.164  0.03678 *  
+    ## Attendance                  0.16555    0.05751   2.878  0.00653 ** 
+    ## Tutoring_Sessions           0.97454    0.50897   1.915  0.06308 .  
+    ## Access_to_ResourcesLow     -9.45774    1.64574  -5.747 1.27e-06 ***
+    ## Access_to_ResourcesMedium  -1.17112    1.35457  -0.865  0.39270    
+    ## Distance_from_HomeModerate -2.77483    1.83142  -1.515  0.13801    
+    ## Distance_from_HomeNear      0.78143    1.64389   0.475  0.63725    
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ## Residual standard error: 3.645 on 38 degrees of freedom
+    ## Multiple R-squared:  0.7382, Adjusted R-squared:  0.6831 
+    ## F-statistic: 13.39 on 8 and 38 DF,  p-value: 5.709e-09
+
+``` r
+#Under the AIC criterion, we should keep previous scores, hours studied, attendance, tutoring sessions, access to resources, and distance from home in our model. However, the tutoring sessions, access to resources, and distance from home variables are not statistically significant based on the model summary. This means that, overall, AIC criterion suggests we include previous scores, attendance, hours studied, and access to resources in the final model. So I will do so. 
+```
