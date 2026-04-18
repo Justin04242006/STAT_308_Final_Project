@@ -38,5 +38,5 @@ Our group used exam scores as the response variable and all other variables as p
 3) Variable selection and model refinement
 4) Assessment of model strengths and weaknesses
 
-I was primarily responsible for 2) and 3) and will thus focus on these parts of the project in this portfolio entry. The code I used to complete these parts of the project can be found in the Project_Code.Rmd file in this project's Git repository.
+I was primarily responsible for 2) and 3) and will thus focus on these parts of the project in this portfolio entry. The code I used to complete these parts of the project can be found in the Project_Code.Rmd file in this project's Git repository. I kept the code the same, except for one methodological difference: when I was actually doing this project in class and began to generate an initial regression model for the high exam scores dataset, I started by verifying assumptions for each individual predictor instead of starting with a full model. Later on, I learned that the latter approach is more statistically sound and thus performed that approach for the purposes of this repository. The result is that my final model for the high exam scores data contains one additional predictor compared to the model I generated and presented in class. 
 
