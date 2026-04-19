@@ -1113,6 +1113,16 @@ predict(High_scores_model_v3, newdata_6, interval="prediction", level=0.95)
 This model is generally optimistic for all previous exam scores within
 the range of the higher scores data.
 
+# Interesting/Unanticipated Model Results
+
+In the higher exam scores model, students with Medium access to
+resources are, on average, expected to have exam scores 0.99 points
+higher than students with High access to resources, holding all
+variables constant. I know this from the model summary, since High is
+the baseline value for the categorical Access_to_Resources variable.
+This result is counterintuitive, as one would expect enhanced access to
+academic resources to boost exam scores.
+
 # Model Limitations and Considerations
 
 The most important weakness of the high exam scores model is its much
@@ -1136,3 +1146,10 @@ bounds for the prediction intervals generated from the high scores model
 were unrealistic (several points above 100). Also, the Kaggle dataset
 does not explicitly state how the thresholds for the categorical
 variables were defined.
+
+To keep the class project manageable given our busy schedules and time
+constraints, my group members limited the scope to 10 predictor
+variables. This means there are nine predictors we did not consider,
+including Internet_Access, Teacher_Quality, Extracurricular_Activities,
+Motivation_Level, School_Type, Physical_Activity, Learning_Disabilities,
+and Gender, which may be of interest to future researchers.
