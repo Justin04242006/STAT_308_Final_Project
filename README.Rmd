@@ -31,12 +31,16 @@ Distance between school and home (categorical, 3 levels): near, moderate, or far
 
 Access to resources: availability of educational resources (categorical, 3 levels): low, medium, high
 
-Our group used exam scores as the response variable and all other variables as predictors. We used multiple linear regression methodologies taught in class, including model building, assumptions, diagnostics, residual analysis, and variable selection, to generate a comprehensive picture of the many factors that influence a student's exam scores. The analysis consisted of three main phases:
+Our group used exam scores as the response variable and all other variables as predictors. 
+We used multiple linear regression methodologies taught in class, including model building, assumptions, diagnostics, residual analysis, and variable selection, to generate a comprehensive picture of the many factors that influence a student's exam scores. 
+The analysis consisted of four main phases (2 and 3 were repeated twice because we generated two separate models)
 
 1) Exploratory data analysis and visualization
 2) Model building and diagnostics
 3) Variable selection and model refinement
 4) Assessment of model strengths and weaknesses
 
-I was primarily responsible for 2) and 3) and will thus focus on these parts of the project in this portfolio entry. The code I used to complete these parts of the project can be found in the Project_Code.Rmd file in this project's Git repository. I kept the code the same, except for one methodological difference: when I was actually doing this project in class and began to generate an initial regression model for the high exam scores dataset, I started by verifying assumptions for each individual predictor instead of starting with a full model. Later on, I learned that the latter approach is more statistically sound and thus performed that approach for the purposes of this repository. The result is that my final model for the high exam scores data contains one additional predictor compared to the model I generated and presented in class. 
+I was primarily responsible for 2) and 3) and will thus focus on these parts of the project in this portfolio entry. 
+I will also briefly touch on 4).
+The code I used to complete these parts of the project can be found in the Project_Code.Rmd file in this project's Git repository.
 
